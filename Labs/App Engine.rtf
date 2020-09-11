@@ -1,0 +1,119 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww25400\viewh16000\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 #Lab: Google cloud fundamentals: Getting started with App Engine\
+\
+##Objectives:\
+\
+\
+\
+\
+In this Lab, you will learn how to to perform the following tasks:\
+\
+	- Initialize App Engine.\
+\
+	- Preview an App Engne application running locally in cloud Shell\
+\
+	- Deploy an App Engineapplication, so others can reach it.\
+\
+	- Disable an App Engine application, when you no longer want it to be visible.\
+	\
+#Steps:\
+\
+1.  Initialize App Engine.\
+\
+\pard\pardeftab720\sl400\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+	- Initialize your app engine app with your Project and chaise its region,  type this command:\
+\
+		gcloud app create \'97project=$DEVSHELL_PROJECT_ID\
+\pard\pardeftab720\sl300\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 		\
+	- Clone the source code repository for a sample application in the hello_world directory, type this command:\
+\
+		git clone https://github.com/GoogleCloudPlatform/python-docs-samples\
+\
+	- Navigate to the source directory, type this command:\
+\
+		cd python-docs-samples/appengine/standard_python3/hello_world\
+\
+\
+\
+\
+2. Preview an App Engne application running locally in cloud Shell\
+\
+\pard\pardeftab720\sl400\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 	- Execute the following command to download and update the packages list:\
+\
+		sudo apt-get update\
+\
+	- Set up a virtual environment in which you will run your application . Python virtual environments are used to isolate package installations from the system:\
+\
+		sudo apt-get install virtualenv\
+\
+	- If prompted [Y/n], press Y and then Enter.\
+\
+	- Enter the following command:\
+\
+		virtuales -p python3 venv\
+\
+	- Activate the virtual environment:\
+\
+		source venv/bin/activate\
+\
+	 - Navigate to your project directory  and install dependencies.\
+\
+		pip install -r requirements.txt\
+\
+\
+	- Run the application.\
+\
+		python main.py\
+\
+	\
+\
+3. Deploy an App Engine application, so others can reach it.\
+\
+	- Navigate to the source directory\
+\
+		ccd ~/python-docs-samples/appengine/standard_python3/hello_world\
+\
+	- Deploy your Hello World application:\
+\
+		gcloud app deploy\
+\
+	- If prompted [ \'93do you want to continue\'94 Y/n], press Y and then Enter.\
+\
+\
+	- Launch your browser to view the app at http://YOUR_PROJECT_ID.appspot.com:\
+		\
+\
+		gcloud app browse\
+\
+	- Copy and paste URL to new Browser.\
+\pard\pardeftab720\sl400\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+4. Disable an App Engine application, when you no longer want it to be visible.\
+\
+\
+\
+	\
+\pard\pardeftab720\sl400\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+}
